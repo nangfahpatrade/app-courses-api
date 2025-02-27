@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  node-api:
+    build: .
+    environment:
+      DB_USER: root
+      DB_HOST: 203.146.252.205
+      DB_DATABASE: courses-online
+      DB_PASSWORD: 5839011223
+      DB_PORT: 5432
+      FTP_HOST: 203.146.252.205
+      FTP_USER: courses
+      FTP_PASSWORD: 5839011223
+      EMAIL_USER: devsriwararak.work@gmail.com
+      EMAIL_PASS: ocbp dcjw vxzr wkbx
+      JWT_SECRET: smalldick_bigheart
+      PROMPTPAY_CODE: 085-003-2649
+      SLIP_OK_ACCOUNT_NUMBER: xxx-x-x8937-x
+      SLIP_OK_ACCOUNT_NAME: MR. Nattawut S
+      SLIP_OK_BRANCH_ID: 30296
+      SLIP_OK_API_KEY: SLIPOKJY1D5AT
+      STRIPE_SECRET_KEY: sk_test_51QPIOH2LKyHvRehIpcg8Z79XYaRnEHE1yy8tcXN9RRouXRAWDPlGNGGryTOtzHKt23Ho4sMj23MxtWlVuHkSA3OU00scQK3tC8
+      STRIPE_ENDPOINT_SECRET: whsec_CI9tYskWSryoQ7HdcaA33mcgZ1Sb7vb5
+      REDIRECT_TO_FRONTEND: https://demo-courses-online-dev.vercel.app
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/usr/src/app
