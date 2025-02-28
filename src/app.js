@@ -29,7 +29,12 @@ const app = express();
 // Webhook Route ห้ามย้ายตำแหน่ง
 // app.post('/api/webhook', express.raw({ type: "application/json" }),stripeHookCheck )
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: "GET, POST, PUT, DELETE, OPTIONS",
+  allowedHeaders: "Content-Type, Authorization"
+}));
+
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
