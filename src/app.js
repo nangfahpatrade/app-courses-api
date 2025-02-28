@@ -32,7 +32,9 @@ const app = express();
 app.use(cors({
   origin: ["http://localhost:5173", "https://octopus-app-bwcrg.ondigitalocean.app"],
   methods: "GET, POST, PUT, DELETE, OPTIONS",
-  allowedHeaders: "Content-Type, Authorization"
+  allowedHeaders: "Content-Type, Authorization" , 
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
 }));
 
 app.use(express.json({ limit: '50mb' }));
